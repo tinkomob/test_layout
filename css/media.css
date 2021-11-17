@@ -1,0 +1,103 @@
+@media screen and (min-width: 768px) {
+    .user-interface .search-form{
+        display: none;
+    }
+    .info-768{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header, .user-interface, .main-menu, .info-768{
+        padding: 10px 25px;
+    }
+    .header{
+        justify-content: center;
+    }
+    .header-links li > a{
+        margin-right: 0;
+    }
+    .header-links{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .header .search-form{
+        display: none;
+    }
+    .user-interface .search-form{
+        display: block;
+        position: relative;
+    }
+    .company-info, .company-phone{
+        display: none;
+    }
+    .functional span{
+        display: none;
+
+    }
+    #search-submit{
+        position: absolute;
+        right: 3px;
+        top: calc(50% - 26px/2);
+        height: 26px;
+        width: 26px;
+        border: none;
+        border-radius: 45px;
+        background: none;  
+    }
+    .nav-menu a{
+        font-size: 20px;
+    }
+    .search-form input {
+        width: 100%;
+    }
+    .info-768{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* flex: 1; */
+    }
+    .info-768 img{
+        margin-right: 5px;
+    }
+    .info-768 .working-hours, .info-768 .location{
+        display: flex;
+        align-items: center;
+    }
+    .phone-data-768{
+        display: flex;
+    }
+    .phone-data-768 img{
+        margin-right: 5px;
+    } 
+
+}
+
+@media screen and (min-width: 480px) {
+    .container-mobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container-desktop,.inform{
+        display: none;
+    }
+    .container-mobile{
+        display: block;
+        
+    }
+    .mobile-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 2px 3px 1px rgba(43, 43, 43, 0.4);
+        padding: 0 10px;
+    }
+    .mobile-header .icon img{
+        width: 24px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
+}
