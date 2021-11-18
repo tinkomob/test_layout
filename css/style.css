@@ -14,10 +14,6 @@
     --border-color: #DDDDDD;
     
 }
-/* @font-face {
-    font-family: "Koko";
-    src: url("../fonts/BebasNeue-Regular.ttf");
-} */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.ttf");
@@ -33,7 +29,6 @@ b{
     color: var(--link-main-color);
 }
 .inform{
-    /* width: 100%; */
     font-size: 19px;
     text-align: center;
     background-color: var(--inform-bg-color);
@@ -55,7 +50,7 @@ b{
 .header-links li > a{
     margin-right: 30px;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--link-main-color);
 }
 .header-links li > a:hover{
@@ -67,7 +62,6 @@ b{
 .search-form input{
     background: url(../icons/search.svg) no-repeat scroll 7px 7px;
     padding: 8px 26px;
-    /* width: 250px; */
     border: 1px solid var(--border-color);
     border-radius: 27px;
     flex-grow: 2;
@@ -101,6 +95,7 @@ b{
     flex-direction: column;
 }
 .company-info p{
+    font-size: 15px;
     display: flex;
     padding: 5px;
 }
@@ -151,7 +146,6 @@ b{
     justify-content: space-around;
     text-align: center;
     flex-grow: auto;
- 
 }
 .functional a{
     color: #272C26;
@@ -185,9 +179,15 @@ b{
     text-decoration: none;
     color: var(--main-menu-link-color);
     font-size: 22px;
-    /* line-height: 26px;
-    letter-spacing: 0.05em; */
 }
 .nav-menu a:hover{
     color: #88c071;
+}
+.tel{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--link-main-color);
+}
+.tel:hover{
+    opacity: .8;
 }

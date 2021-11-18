@@ -41,11 +41,10 @@
                 <div class="company-phone">
                     <img src="icons/phone.svg">
                     <div class="phone-info">
-                        <p><b>+ 7 (999) 999-999</b></p>
-                        <p><b>+ 7 (999) 999-999</b></p>
+                        <p><b><a class="tel" href="tel:+7(999) 999-999">+ 7 (999) 999-999</a></b></p>
+                        <p><b><a class="tel" href="tel:+7(999) 999-999">+ 7 (999) 999-999</a></b></p>
                         <a class="call-me-back" href="#">Обратный звонок</a>
                     </div>
-                    
                 </div>
                 <div class="functional">
                     <div class="user-login">
@@ -66,23 +65,16 @@
                 </div>
             </div>
             <div class="info-768">
-                
                     <p class="working-hours"><img src="icons/time.svg" alt="time">Время работы: <b> 09:00 - 20:30</b> </p>
                     <div class="phone-data-768">
                         <img src="icons/phone.svg">
                         <div class="phone-info">
-                            <p><b>+ 7 (999) 999-999</b></p>
+                            <p><b><a class="tel" href="tel:+7(999) 999-999">+ 7 (999) 999-999</a></b></p>
                             <a class="call-me-back" href="#">Обратный звонок</a>
                         </div>
                     </div>
-                    
                     <p class="location"><img class="location-icon" src="icons/location.svg" alt="location"><b>ул. Ак. Вавилова, д. 1, стр. 10</b>
                         <img class="location-expand" src="icons/adress-fold.svg"> </p>
-                
-                
-                    
-                    
-                
             </div>
             <div class="main-menu">
                 <ul class="nav-menu">
@@ -98,7 +90,7 @@
     </div>
     <div class="container-mobile">
         <div class="mobile-header">
-            <a class="icon" href="#">
+            <a class="icon show-menu" href="#">
                 <img src="icons/menu-burger.svg">
             </a>
             <a class="icon" href="#">
@@ -113,14 +105,14 @@
             </a>
         </div>
         <div class="mobile-menu">
-            <div class="close-menu-button"><button><img src="icons/close-menu.svg" alt="Закрыть меню"></button></div>
+            <div class="close-menu-button"><img src="icons/close-menu.svg" alt="Закрыть меню"></div>
             <div class="mobile-navbar">
                 <a href="#"><img src="icons/user.svg"> <span>Вход в личный кабинет</span> </a>
                 <a href="#"><img src="icons/search.svg"> <span>Поиск</span> </a>
-                <a href="#"><img src="icons/favorites.svg"> <span>Избранное</span> </a>
+                <a href="#" class="link-favorites"><img src="icons/favorites.svg"> <span>Избранное</span> </a>
                 <ul class="navbar-menu">
                     <li>
-                        <a href="#"><img src="icons/category-action.svg"> Каталог</a>
+                        <a href="#"><img class="category-fold" src="icons/category-action.svg"> Каталог</a>
                         <ul class="ul_submenu">
                             <li><a href="#">Акции</a></li>
                             <li><a href="#">Цветы</a></li>
@@ -130,7 +122,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><img src="icons/category-action.svg">О нас</a>
+                        <a href="#"><img class="category-fold" src="icons/category-action.svg">О нас</a>
                         <ul class="ul_submenu">
                             <li><a href="#">О нас</a></li>
                             <li><a href="#">Отзывы</a></li>
@@ -138,7 +130,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><img src="icons/category-action.svg">Интернет-магазин</a>
+                        <a href="#"><img class="category-fold" src="icons/category-action.svg">Интернет-магазин</a>
                         <ul class="ul_submenu">
                             <li><a href="#">Доставка</a></li>
                             <li><a href="#">Оплата</a></li>
@@ -150,7 +142,7 @@
                 <div class="phone-data-mobile">
                     <img src="icons/phone.svg">
                     <div class="phone-info">
-                        <p><b>+ 7 (999) 999-999</b></p>
+                        <p><b><a class="tel" href="tel:+7(999) 999-999">+ 7 (999) 999-999</a></b></p>
                         <a class="call-me-back" href="#">Обратный звонок</a>
                     </div>
                 </div>
@@ -158,16 +150,22 @@
         </div>
         
     </div>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.js" crossorigin="anonymous"></script>
     <script>
         $('li a').click(function(e) {
-  e.preventDefault();
-  $(this).closest("li").find("[class^='ul_submenu']").slideToggle();
-});
-
+            e.preventDefault();
+            $(this).closest("li").find("[class^='ul_submenu']").slideToggle();
+            $(this).find('img').toggleClass('rotated');
+        });
+        $('.close-menu-button').click(() => {
+            $('.mobile-menu').slideUp();
+            $('.mobile-header').css('display', 'flex');
+        });
+        $('.show-menu').click((e) => {
+            e.preventDefault();
+            $('.mobile-menu').show();
+            $('.mobile-header').hide();
+        });
     </script>
 </body>
 </html>
