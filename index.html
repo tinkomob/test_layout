@@ -112,6 +112,62 @@
                 <img src="icons/basket.svg">    
             </a>
         </div>
+        <div class="mobile-menu">
+            <div class="close-menu-button"><button><img src="icons/close-menu.svg" alt="Закрыть меню"></button></div>
+            <div class="mobile-navbar">
+                <a href="#"><img src="icons/user.svg"> <span>Вход в личный кабинет</span> </a>
+                <a href="#"><img src="icons/search.svg"> <span>Поиск</span> </a>
+                <a href="#"><img src="icons/favorites.svg"> <span>Избранное</span> </a>
+                <ul class="navbar-menu">
+                    <li>
+                        <a href="#"><img src="icons/category-action.svg"> Каталог</a>
+                        <ul class="ul_submenu">
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Цветы</a></li>
+                            <li><a href="#">Букеты</a></li>
+                            <li><a href="#">Композиции</a></li>
+                            <li><a href="#">Подарки</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="icons/category-action.svg">О нас</a>
+                        <ul class="ul_submenu">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="icons/category-action.svg">Интернет-магазин</a>
+                        <ul class="ul_submenu">
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Гарантии</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="phone-data-mobile">
+                    <img src="icons/phone.svg">
+                    <div class="phone-info">
+                        <p><b>+ 7 (999) 999-999</b></p>
+                        <a class="call-me-back" href="#">Обратный звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <script>
+        $('li a').click(function(e) {
+  e.preventDefault();
+  $(this).closest("li").find("[class^='ul_submenu']").slideToggle();
+});
+
+    </script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+*{
+    --border-color: #DEDEDE;
+}
 @media screen and (min-width: 768px) {
     .user-interface .search-form{
         display: none;
@@ -86,7 +89,7 @@
         
     }
     .mobile-header{
-        display: flex;
+        display: none; /* display: flex; */
         align-items: center;
         justify-content: space-around;
         box-shadow: 0 2px 3px 1px rgba(43, 43, 43, 0.4);
@@ -95,6 +98,90 @@
     .mobile-header .icon img{
         width: 24px;
         height: 20px;
+    }
+    .mobile-navbar{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .mobile-navbar ul{
+        width: 100%;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .navbar-menu > li{
+        padding-top: 10px;
+    }
+    .navbar-menu > li > a{
+        /* padding: 10px 0; */
+    }
+    .navbar-menu{
+        border-top: 1px solid var(--border-color);
+    }
+    .mobile-navbar ul li a{
+        padding: 0px 22px;
+        padding-bottom: 10px;
+
+    }
+    .mobile-navbar ul li a > img{
+        margin-right: 10px;
+    }
+    .mobile-navbar > a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #272C26;
+        padding: 10px 22px;
+    }
+    .mobile-navbar > a img{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .close-menu-button{
+        display: flex;
+        justify-content: flex-end;
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .close-menu-button > button{
+        background: none;
+        border: none;
+    }
+    .ul_submenu{
+        background-color: #ececec;
+        border-top: 1px solid var(--border-color);
+        /* padding: 10px 0; */
+        padding-bottom: 0;
+    }
+    .navbar-menu > li a{
+        display: block;
+        /* width: 320px; */
+        text-decoration: none;
+        color: #272C26;
+    }
+    .ul_submenu li{
+        padding: 10px 0;
+        border-bottom: 1px solid #FFFFFF;
+        background: url(../icons/sub-category-go.svg) no-repeat scroll 0 14px;
+        background-position: 95%;
+    }
+    .ul_submenu li a{
+        padding: 0 70px !important;
+    }
+    .phone-data-mobile{
+        padding: 5px 22px;
+        display: flex;
+    }
+    .phone-data-mobile img{
+        margin-right: 10px;
+    }
+    .phone-data-mobile > .phone-info{
+        padding: 5px 22px;
+        
+    }
+    .phone-data-mobile > .phone-info > p{
+        /* padding-bottom: 10px; */
     }
 }
 
